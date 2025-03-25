@@ -32,6 +32,40 @@ class Stack{
     size(){
         return this.stack.length
     }
+
+    stackprint(){
+        if (this.isEmpty()) {
+            return "the stack is empty"
+        }
+
+        console.log(this.stack.join(' '));
+        
+    }
+
+    priint(){
+        if(this.isEmpty()){
+            return "th stvk is empty"
+        }
+
+        for(let i = this.stack.length-1;i>=0;i--){
+            console.log(this.stack[i]);
+            
+        }
+    }
+
+
+    reverse(){
+        if(this.isEmpty()){
+            return "cant reverse a empty string"
+        }
+
+        let temp = []
+
+        while(!this.isEmpty()){
+            temp.push(this.pop())
+        }
+        this.stack = temp
+    }
 }
 
 
@@ -42,6 +76,11 @@ Sta.push(10)
 Sta.push(5)
 Sta.push(12)
 Sta.pop()
-console.log(Sta.size());
 
-console.log(Sta.peek());
+
+Sta.priint()
+console.log("......>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+
+Sta.reverse()
+Sta.priint()
+
