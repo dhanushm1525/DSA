@@ -52,7 +52,7 @@ class linkedList{
             let curr = this.head
             let values = ''
             while(curr){
-                values+=`${curr.values} `
+                values+=`${curr.value} `
                 curr = curr.next
             }
             console.log(values);

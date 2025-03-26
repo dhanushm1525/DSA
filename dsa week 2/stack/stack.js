@@ -66,6 +66,19 @@ class Stack{
         }
         this.stack = temp
     }
+
+    rev(){
+        if(this.isEmpty()){
+            return "the stavck is empty"
+        }
+
+        let temp = []
+        while(!this.isEmpty()){
+            temp.push(this.pop())
+        }
+
+        this.stack = temp
+    }
 }
 
 
@@ -81,6 +94,6 @@ Sta.pop()
 Sta.priint()
 console.log("......>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
-Sta.reverse()
+Sta.rev()
 Sta.priint()
 
