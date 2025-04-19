@@ -17,7 +17,7 @@ class Cqueue{
     enque(value){
         if(this.isFull()){
             return "queue is full"
-        }
+        }     
 
         if(this.isEmpty()) this.front = 0
         this.rear = (this.rear+1)%this.size

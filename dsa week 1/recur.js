@@ -15,18 +15,18 @@ let array = [1,2,3,4,5,6,7,8,9]
 console.log(oddoreven(array));
 
 
-function count(str,index=0,countt=0){
-    if(index>=str.length) return countt
+// function count(str,index=0,countt=0){
+//     if(index>=str.length) return countt
 
-     let check = 'aeiouAEIOU'
-     if(check.includes(str[index])){
-        countt++
-     }
-     return count(str,index+1,countt 
+//      let check = 'aeiouAEIOU'
+//      if(check.includes(str[index])){
+//         countt++
+//      }
+//      return count(str,index+1,countt 
         
-     )
-}
+//      )
+// }
 
-let string = 'brototype'
+// let string = 'brototype'
 
-console.log(count(string))
+// console.log(count(string))

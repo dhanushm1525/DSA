@@ -4,12 +4,13 @@ class Stack{
     }
 
 
+
     push(value){
         this.stack.push(value)
     }
 
     isEmpty(){
-        return this.stack.length ===0
+        return this.stack.length===0
     }
 
     pop(){

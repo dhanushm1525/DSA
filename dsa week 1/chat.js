@@ -19,10 +19,13 @@ function sum(num){
 
 //fibo
 function fibo(n){
-    if(n<2) return 1
+    if(n<2) return n
 
     return fibo(n-1)+fibo(n-2)
 }
+
+console.log(fibo(5));
+
 
 
 // reverse a string
@@ -33,6 +36,8 @@ function revv(str){
 
     return str[str.length-1]+revv(str.slice(0,-1))
 }
+
+console.log(revv('hello world'));
 
 
 
@@ -82,7 +87,7 @@ function oddoreven(arr,index=0,sum=0){
 
 
 
-//prime
+//dupli sum
 
 function duplisum(n,index=0,seen= new Set(),counted = new Set()){
 
@@ -103,7 +108,6 @@ function duplisum(n,index=0,seen= new Set(),counted = new Set()){
 }
 
 
-console.log(duplisum([1,1,2,3,3,4,5,5,6]));
 
 
 

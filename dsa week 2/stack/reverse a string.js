@@ -14,11 +14,35 @@ const reverse = function (s){
             final+=" "+current
         }
     }
-
+ 
    
 
     return final.trim()
 }
 
 
-console.log(reverse("azia is vaazha"));
+
+
+function rev(str){
+    let splitz = str.split(' ')
+
+    let stack = []
+
+    for(i of str){
+        stack.push(i)
+    }
+
+    let finl = ''
+    while(stack.length){
+        let current = stack.pop()
+
+
+        if(current){
+            finl+=""+current
+        }
+    }
+
+    return finl
+}
+
+console.log(rev("aidrin "));
