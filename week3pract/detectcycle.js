@@ -1,30 +1,25 @@
 function hasCycleUndirected(graph) {
-    const visited = new Set();
-  
-    function dfs(node, parent) {
-      visited.add(node);
-  
-      for (let neighbor of graph[node]) {
-        if (!visited.has(neighbor)) {
-          if (dfs(neighbor, node)) return true;
-        } else if (neighbor !== parent) {
-          // If visited and not parent, cycle detected
-          return true;
-        }
-      }
-  
-      return false;
-    }
-  
-    for (let node in graph) {
-      if (!visited.has(node)) {
-        if (dfs(node, -1)) return true;
+  const visited = new Set();
+
+  const dfs = (node, parent) => {
+    visited.add(node);
+
+    for (const neighbor of graph[node]) {
+      if (!visited.has(neighbor)) {
+        if (dfs(neighbor, node)) return true;
+      } else if (neighbor !== parent) {
+        return true; // Cycle found
       }
     }
-  
+
     return false;
+  };
+
+  for (const node in graph) {
+    if (!visited.has(node) && dfs(node, null)) {
+      return true;
+    }
   }
 
-  
-  
-  
+  return false;
+}

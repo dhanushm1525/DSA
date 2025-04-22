@@ -69,6 +69,7 @@ class Graph{
 
     dfs(node,visited = new Set()){
         if(visited.has(node)) return;
+        
 
         console.log(node);
         visited.add(node)
