@@ -32,6 +32,7 @@ class BinarySearchTree {
             if (root.left === null) {
                 root.left = newNode
             } else {
+                
                 this.insertNode(root.left, newNode)
             }
         } else {
@@ -39,6 +40,7 @@ class BinarySearchTree {
                 root.right = newNode
             } else {
                 this.insertNode(root.right, newNode)
+                
             }
         }
     }

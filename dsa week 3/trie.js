@@ -11,7 +11,7 @@ class TrieNode {
     }
   
     insert(word) {
-      let node = this.root;
+      let node = this.root; 
       for (let char of word) {
         if (!node.children[char]) {
           node.children[char] = new TrieNode();
@@ -39,36 +39,36 @@ class TrieNode {
       return true;
     }
   
-    _collectWords(node, prefix, results) {
+    collectWords(node, prefix, results) {
       if (node.isEndOfWord) results.push(prefix);
       for (let char in node.children) {
-        this._collectWords(node.children[char], prefix + char, results);
+        this.collectWords(node.children[char], prefix + char, results);
       }
     }
   
     autoComplete(prefix) {
       let node = this.root;
       for (let char of prefix) {
-        if (!node.children[char]) return [];
+        if(!node.children[char]) return [];
         node = node.children[char];
       }
       let results = [];
-      this._collectWords(node, prefix, results);
+      this.collectWords(node, prefix, results);
       return results;
     }
   
     // Count all words in the trie
-    _countWordsRecursive(node) {
+    countWordsRecursive(node) {
       let count = 0;
       if (node.isEndOfWord) count++;
       for (let char in node.children) {
-        count += this._countWordsRecursive(node.children[char]);
+        count += this.countWordsRecursive(node.children[char]);
       }
       return count;
     }
   
     countWords() {
-      return this._countWordsRecursive(this.root);
+      return this.countWordsRecursive(this.root);
     }
   }
   
