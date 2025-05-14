@@ -6,6 +6,8 @@ class maxHeap {
 
     getLeftChildIndex(index) {
         return index * 2 + 1
+   
+        
     }
     getRightChildIndex(index) {
         return index * 2 + 2
@@ -18,6 +20,7 @@ class maxHeap {
     }
     swap(a, b) {
         [this.heap[a], this.heap[b]] = [this.heap[b], this.heap[a]]
+           
     }
     heapifyUp(index) {
         while (this.hasParent(index) && this.heap[this.getParentIndex(index)] < this.heap[index]) {
@@ -25,8 +28,8 @@ class maxHeap {
             index = this.getParentIndex(index)
         }
     }
-
-    heapifyDown(index) {
+    
+    heapifyDown(index) {                  
         let largest = index
         let leftChildIndex = this.getLeftChildIndex(index)
         let rightChildIndex = this.getRightChildIndex(index)

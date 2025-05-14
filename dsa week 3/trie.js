@@ -81,6 +81,7 @@ trie.insert("apex");
 trie.insert("bat");
 trie.insert("bath");
 trie.insert("batman");
+trie.insert("dhanus");
 
 
 console.log("=== Search ===");

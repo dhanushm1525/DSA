@@ -31,6 +31,26 @@ class heap{
     }
 
 
+    heapdown(index){
+        let largest = index 
+        let left = this.getleft(index)
+        let rigth = this.getright(index)
+
+        if(left<this.heap.length&&this.heap[left]>this.heap[largest]){
+            largest = left
+        }
+
+        if (rigth<this.heap.length&&this.heap[rigth]>this.heap[largest]) {
+            largest = rigth
+        }
+
+        if(largest !== index){
+            this.swap(index,largest)
+            this.heapdown(largest)
+        }
+    }
+
+
     
 }
 
